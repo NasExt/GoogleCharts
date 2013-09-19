@@ -1,0 +1,21 @@
+{
+    "name": "nasext/google-charts",
+    "type": "library",
+    "description": "Google charts for Nette Framework",
+    "keywords": ["nette", "nasext", "Google Charts"],
+    "license": ["MIT"],
+    "authors": [
+        {
+            "name": "Dusan Hudak"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "nette/nette": "@dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "NasExt\\GoogleCharts\\": "src/"
+        }
+    }
+}
