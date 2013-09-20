@@ -58,13 +58,13 @@ class Cell extends Object
 		if ($f != NULL) {
 			$this->f = $f;
 		} else {
-			unset($f);
+			unset($this->f);
 		}
 
 		if ($p != NULL) {
 			$this->p = $p;
 		} else {
-			unset($p);
+			unset($this->p);
 		}
 	}
 }
