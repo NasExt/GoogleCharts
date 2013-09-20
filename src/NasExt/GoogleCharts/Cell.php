@@ -35,7 +35,7 @@ class Cell extends Object
 	 * only as a label for display. If omitted, a string version of v will be used.
 	 * @var string
 	 */
-	//public $f;
+	public $f;
 
 	/**
 	 *  An object that is a map of custom values applied to the cell. These values can be of any JavaScript type.
@@ -43,7 +43,7 @@ class Cell extends Object
 	 * this property will be ignored. Example: p:{style: 'border: 1px solid green;'}.
 	 * @var string
 	 */
-	//public $p;
+	public $p;
 
 
 	/**
