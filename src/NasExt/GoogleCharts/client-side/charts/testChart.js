@@ -20,8 +20,10 @@ GoogleCharts.test = function (elm) {
         url: dataInit.handle,
         dataType: "json",
         success: function (payload) {
+            var dataTable = eval('(' + payload.dataTable + ')');
+
             // Create the data table.
-            var data = new google.visualization.DataTable(payload.dataTable);
+            var data = new google.visualization.DataTable(dataTable);
 
             // Set chart options
             var options = {};

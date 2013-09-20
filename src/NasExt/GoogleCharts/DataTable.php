@@ -33,7 +33,9 @@ class DataTable extends Object
 	 */
 	public function getTable()
 	{
-		return Json::encode($this);
+		$json = Json::encode($this);
+		$json = $this->filterDate($json);
+		return $json;
 	}
 
 
@@ -58,5 +60,15 @@ class DataTable extends Object
 			$row->addCell($cell);
 		}
 		$this->rows[] = $row;
+	}
+
+
+	/**
+	 * @param string $data
+	 * @return string
+	 */
+	private function filterDate($data = '')
+	{
+		return preg_replace('#\:"new Date\((.*?)\)\"#is', ':new Date($1)', $data);
 	}
 }

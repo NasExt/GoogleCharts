@@ -94,6 +94,12 @@ public function handleGetProductChartTable()
 	}
 }
 ```
+
+Create DATE type cell
+```php
+new NasExt\GoogleCharts\Cell("new Date(2009,1,21,0,31,26)")
+```
+
 Create chart JS library for example client-side/charts/testChart.js. Method name (test) is call by name defined in $dataChartInit['name']
 ```js
 GoogleCharts.test = function (elm) {
@@ -105,8 +111,10 @@ GoogleCharts.test = function (elm) {
         url: dataInit.handle,
         dataType: "json",
         success: function (payload) {
+            var dataTable = eval('(' + payload.dataTable + ')');
+
             // Create the data table.
-            var data = new google.visualization.DataTable(payload.dataTable);
+            var data = new google.visualization.DataTable(dataTable);
 
             // Set chart options
             var options = {};
